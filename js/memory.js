@@ -1,10 +1,10 @@
 
-# Detect mismatched items
-#
-# Conditions:
-# 0. Two items has just been selected
-# 1. The same item has been selected twice
-# 2. Selected items are of different groups
+// Detect mismatched items
+//
+// Conditions:
+// 0. Two items has just been selected
+// 1. The same item has been selected twice
+// 2. Selected items are of different groups
 @cld_by_value
 def memory_detectMismatchedItems(
   c: memory_Context
@@ -36,10 +36,10 @@ def memory_detectMismatchedItems(
   c.recentField = "none"
   return c
 
-# Detect victory
-#
-# Conditions:
-# 1. Matching items have just been hidden and all items are hidden now
+// Detect victory
+//
+// Conditions:
+// 1. Matching items have just been hidden and all items are hidden now
 @cld_by_value
 def memory_detectVictory(
   c: memory_Context
@@ -55,12 +55,12 @@ def memory_detectVictory(
   c.recentField = "none"
   return c
 
-# Generate constant playfield
-#
-# Conditions:
-# 1. Size has just been specified
-#
-# Both ids and group ids start with 0
+// Generate constant playfield
+//
+// Conditions:
+// 1. Size has just been specified
+//
+// Both ids and group ids start with 0
 @cld_by_value
 def memory_generateConstPlayfield(
   c: memory_Context
@@ -83,10 +83,10 @@ def memory_generateConstPlayfield(
   c.recentField = "playfieldItems"
   return c
 
-# Hide matching selected items
-#
-# Conditions:
-# 1. Two items are selected and they are of the same group
+// Hide matching selected items
+//
+// Conditions:
+// 1. Two items are selected and they are of the same group
 @cld_by_value
 def memory_hideMatchingItems(
   c: memory_Context
@@ -104,10 +104,10 @@ def memory_hideMatchingItems(
   c.recentField = "none"
   return c
 
-# Select item
-#
-# Conditions:
-# 1. Id has just been specified for selection
+// Select item
+//
+// Conditions:
+// 1. Id has just been specified for selection
 @cld_by_value
 def memory_selectItem(
   c: memory_Context

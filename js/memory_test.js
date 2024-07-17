@@ -6,7 +6,7 @@ def memory_test_detectMismatchedItems(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select two items of different groups.
+  // Select two items of different groups.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -14,10 +14,10 @@ def memory_test_detectMismatchedItems(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # Detect mismatching.
+  // Detect mismatching.
   c = memory_detectMismatchedItems(c)
 
-  # See if the two selected items do not match.
+  // See if the two selected items do not match.
   if (
     c.recentField == "mismatchedItems" and
     len(c.mismatchedItems) == 2 and
@@ -35,7 +35,7 @@ def memory_test_detectMismatchedItems_itemTwice(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select the same item twice.
+  // Select the same item twice.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -43,10 +43,10 @@ def memory_test_detectMismatchedItems_itemTwice(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # Detect mismatching.
+  // Detect mismatching.
   c = memory_detectMismatchedItems(c)
 
-  # See if the two selected items do not match.
+  // See if the two selected items do not match.
   if (
     c.recentField == "mismatchedItems" and
     len(c.mismatchedItems) == 1 and
@@ -63,7 +63,7 @@ def memory_test_detectVictory(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select the first two items of the same group.
+  // Select the first two items of the same group.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -71,10 +71,10 @@ def memory_test_detectVictory(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # Hide the first pair.
+  // Hide the first pair.
   c = memory_hideMatchingItems(c)
 
-  # Select the last two items of the same group.
+  // Select the last two items of the same group.
   c.selectedId = 2
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -82,13 +82,13 @@ def memory_test_detectVictory(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # Hide the second pair.
+  // Hide the second pair.
   c = memory_hideMatchingItems(c)
 
-  # Detect victory.
+  // Detect victory.
   c = memory_detectVictory(c)
 
-  # See if victory has been detected.
+  // See if victory has been detected.
   if (
     c.recentField == "victory" and
     c.victory == True
@@ -122,7 +122,7 @@ def memory_test_hideMatchingItems(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select two items of the same group.
+  // Select two items of the same group.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -130,10 +130,10 @@ def memory_test_hideMatchingItems(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # Hide matching items.
+  // Hide matching items.
   c = memory_hideMatchingItems(c)
 
-  # See if the two selected items match.
+  // See if the two selected items match.
   if (
     c.recentField == "hiddenItems" and
     len(c.hiddenItems) == 2 and
@@ -151,12 +151,12 @@ def memory_test_selectItem_1x(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select the first item.
+  // Select the first item.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # See if it's in selectedItems now.
+  // See if it's in selectedItems now.
   if (
     c.recentField == "selectedItems" and
     len(c.selectedItems) == 1 and
@@ -173,7 +173,7 @@ def memory_test_selectItem_2x(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select the first two items.
+  // Select the first two items.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -181,7 +181,7 @@ def memory_test_selectItem_2x(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # See if both items are selected now.
+  // See if both items are selected now.
   if (
     c.recentField == "selectedItems" and
     len(c.selectedItems) == 2 and
@@ -199,7 +199,7 @@ def memory_test_selectItem_3x(
   c.recentField = "playfieldSize"
   c = memory_generateConstPlayfield(c)
 
-  # Select three items.
+  // Select three items.
   c.selectedId = 0
   c.recentField = "selectedId"
   c = memory_selectItem(c)
@@ -210,7 +210,7 @@ def memory_test_selectItem_3x(
   c.recentField = "selectedId"
   c = memory_selectItem(c)
 
-  # See if only one (last) item is selected now.
+  // See if only one (last) item is selected now.
   if (
     c.recentField == "selectedItems" and
     len(c.selectedItems) == 1 and
