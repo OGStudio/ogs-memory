@@ -1,5 +1,3 @@
-from memory_Context import *
-from cld import *
 
 # Detect mismatched items
 #

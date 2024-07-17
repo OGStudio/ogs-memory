@@ -1,5 +1,3 @@
-from memory import *
-from memory_Context import *
 
 def memory_test_detectMismatchedItems(
 ) -> str:
